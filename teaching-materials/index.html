@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- cache 20261106c -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teaching Materials · Citizenship, Economics and Society · SKH Holy Carpenter Secondary School</title>
+<meta name="description" content="Teaching materials for Citizenship, Economics and Society at SKH Holy Carpenter Secondary School.">
+<style>
+  :root {
+    --accent: #5bbad5;
+    --accent-deep: #2a8fad;
+    --accent-ink: #0c5a70;
+    --kicker: #2a8fad;
+    --accent-soft: #e8f7fb;
+    --navy: #123a4d;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --card: #ffffff;
+    --bg: #f5fafc;
+    --border: #d3e8ef;
+    --shadow: 0 4px 16px rgba(18, 58, 77, 0.07);
+    --teacher: #0c5a70;
+    --teacher-soft: #e6f4f8;
+    --phone: #2f6b3c;
+    --phone-soft: #e7f6ea;
+    --desktop: #3d4570;
+    --desktop-soft: #eceef8;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: "Segoe UI", system-ui, -apple-system, "PingFang HK", "Noto Sans TC", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: calc(24px + env(safe-area-inset-top, 0px)) 18px 48px;
+  }
+  a.back {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+  a.back:hover, a.back:focus-visible { text-decoration: underline; outline: none; }
+  a.back:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  header.hero {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .hero-accent {
+    height: 6px;
+    background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 20px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand img {
+    height: 58px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+  .hero-body { padding: 14px 20px 18px; }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+  .subject {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--muted);
+  }
+  .hub-section { margin-top: 26px; overflow-anchor: none; }
+  .hub-section:first-of-type { margin-top: 22px; }
+  .hub-section > summary.hub-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-sizing: border-box;
+    min-height: 44px;
+    margin: 0 0 10px;
+    padding: 10px 4px 10px 12px;
+    border-left: 4px solid var(--accent-deep);
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.25;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .hub-section > summary.hub-heading::-webkit-details-marker { display: none; }
+  .hub-section > summary.hub-heading::marker { content: ""; }
+  .hub-section > summary.hub-heading:hover { color: var(--accent-ink); }
+  .hub-section > summary.hub-heading:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .hub-heading-text {
+    flex: 1;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: inherit;
+    text-align: left;
+  }
+  .hub-chevron {
+    flex-shrink: 0;
+    width: 0.85rem;
+    height: 0.85rem;
+    border-right: 2.5px solid var(--accent-ink);
+    border-bottom: 2.5px solid var(--accent-ink);
+    transform: rotate(45deg);
+    margin-top: -3px;
+    transition: transform .15s ease;
+  }
+  .hub-section[open] > summary .hub-chevron {
+    transform: rotate(-135deg);
+    margin-top: 3px;
+  }
+  .hub-section:has(> .hub-folders) > summary.hub-heading { margin-bottom: 0; }
+  .hub-folders {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 8px;
+    padding: 8px 0 2px 8px;
+    border-left: 4px solid var(--accent-deep);
+  }
+  .hub-folder {
+    margin: 0;
+    overflow-anchor: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .hub-folder > summary.hub-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-sizing: border-box;
+    min-height: 48px;
+    margin: 0;
+    padding: 10px 12px;
+    border-left: 0;
+    border-radius: 12px;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.25;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .hub-folder > summary.hub-heading::-webkit-details-marker { display: none; }
+  .hub-folder > summary.hub-heading::marker { content: ""; }
+  .hub-folder > summary.hub-heading:hover { color: var(--accent-ink); }
+  .hub-folder > summary.hub-heading:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+  .hub-section > summary.hub-heading > :not(.hub-heading-text):not(.hub-chevron),
+  .hub-folder > summary.hub-heading > :not(.hub-heading-text):not(.hub-chevron) {
+    display: none;
+  }
+  .hub-folder[open] > summary.hub-heading {
+    border-radius: 12px 12px 0 0;
+  }
+  .hub-folder[open] > summary .hub-chevron {
+    transform: rotate(-135deg);
+    margin-top: 3px;
+  }
+  .hub-folder > .cards { margin: 0 10px 10px; }
+  .hub-folder:not([open]) > *:not(summary),
+  .hub-section:not([open]) > *:not(summary) {
+    display: none;
+  }
+  .cards { display: grid; gap: 14px; margin-top: 0; }
+  a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    box-shadow: var(--shadow);
+    min-height: 44px;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  a.card:hover, a.card:focus-visible {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 6px 20px rgba(91, 186, 213, 0.22);
+  }
+  a.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .card-kicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 6px;
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--navy);
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  .card-arrow {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+  }
+  .badge {
+    display: inline-block;
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+  .badge-student {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+  .badge-desktop {
+    background: var(--desktop-soft);
+    color: var(--desktop);
+  }
+  .badge-phone {
+    background: var(--phone-soft);
+    color: var(--phone);
+  }
+  .card .badge-student { color: var(--accent-ink); background: var(--accent-soft); }
+  .card .badge-desktop { color: var(--desktop); background: var(--desktop-soft); }
+  .card .badge-phone { color: var(--phone); background: var(--phone-soft); }
+  footer {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: .78rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (min-width: 640px) {
+    .hub-section { margin-top: 32px; }
+    .hub-section:first-of-type { margin-top: 22px; }
+  }
+  @media print {
+    body { background: #fff; }
+    a.card { box-shadow: none; break-inside: avoid; }
+    a.back { display: none; }
+    .hub-chevron { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../">← Back to CES Home</a>
+
+    <header class="hero">
+      <div class="hero-accent" aria-hidden="true"></div>
+      <div class="brand">
+        <img src="https://www.hcs.edu.hk/template/app/img/logo.png" width="276" height="58" alt="SKH Holy Carpenter Secondary School logo">
+      </div>
+      <div class="hero-body">
+        <h1>Teaching Materials</h1>
+        <p class="subject">Citizenship, Economics and Society</p>
+      </div>
+    </header>
+
+    <details class="hub-section">
+      <summary class="hub-heading" id="sec-s3">
+        <h2 class="hub-heading-text">S3</h2>
+        <span class="hub-chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="cards">
+        <a class="card" href="../ces/">
+          <p class="card-kicker"><span class="badge badge-student">Student</span></p>
+          <h3>Teaching Materials</h3>
+          <p>Classroom and self-study for S3 CES.</p>
+          <span class="card-arrow">Open materials →</span>
+        </a>
+      </div>
+    </details>
+
+    <footer>
+      聖公會聖匠中學 SKH Holy Carpenter Secondary School · Citizenship, Economics and Society<br>
+      Materials for school use
+    </footer>
+  </div>
+</body>
+</html>

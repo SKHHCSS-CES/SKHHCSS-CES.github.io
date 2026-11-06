@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- cache 20261106b -->
+<!-- cache 20261106c -->
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CES · SKH Holy Carpenter Secondary School</title>
-<meta name="description" content="Citizenship and Social Development subject site for SKH Holy Carpenter Secondary School — teaching materials and class activities.">
+<title>CES · Citizenship, Economics and Society · SKH Holy Carpenter Secondary School</title>
+<meta name="description" content="Citizenship, Economics and Society subject site for SKH Holy Carpenter Secondary School — teaching materials and class activities.">
 <style>
   :root {
     --accent: #5bbad5;
@@ -81,48 +81,7 @@
     font-size: .95rem;
     color: var(--muted);
   }
-  .section-tabs {
-    display: flex;
-    gap: 8px;
-    margin-top: 16px;
-    padding: 4px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-  }
-  .section-tabs [role="tab"] {
-    flex: 1 1 0;
-    min-height: 44px;
-    margin: 0;
-    padding: 10px 12px;
-    border: 0;
-    border-radius: 10px;
-    background: transparent;
-    color: var(--muted);
-    font: inherit;
-    font-size: .95rem;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  .section-tabs [role="tab"]:hover {
-    color: var(--navy);
-  }
-  .section-tabs [role="tab"][aria-selected="true"] {
-    background: var(--accent-soft);
-    color: var(--navy);
-    box-shadow: inset 0 -3px 0 var(--accent-deep);
-  }
-  .section-tabs [role="tab"]:focus-visible {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-  }
-  .cards { display: grid; gap: 14px; margin-top: 14px; }
-  [role="tabpanel"][hidden] { display: none; }
+  .cards { display: grid; gap: 14px; margin-top: 16px; }
   a.card {
     display: block;
     text-decoration: none;
@@ -198,7 +157,6 @@
   @media print {
     body { background: #fff; }
     a.card { box-shadow: none; break-inside: avoid; }
-    .section-tabs { box-shadow: none; }
   }
 </style>
 </head>
@@ -211,95 +169,29 @@
       </div>
       <div class="hero-body">
         <h1>CES</h1>
-        <p class="subject">Citizenship and Social Development · SKH Holy Carpenter Secondary School</p>
+        <p class="subject">Citizenship, Economics and Society · SKH Holy Carpenter Secondary School</p>
       </div>
     </header>
 
-    <div class="section-tabs" role="tablist" aria-label="CES sections">
-      <button type="button" class="tab" role="tab" id="tab-materials" aria-selected="true" aria-controls="panel-materials" tabindex="0">Teaching Materials</button>
-      <button type="button" class="tab" role="tab" id="tab-activity" aria-selected="false" aria-controls="panel-activity" tabindex="-1">Class Activity</button>
-    </div>
-
-    <div id="panel-materials" role="tabpanel" aria-labelledby="tab-materials">
-      <div class="cards">
-        <a class="card" href="ces/">
-          <p class="card-kicker"><span class="badge badge-student">Student</span></p>
-          <h2>Teaching Materials</h2>
-          <p>Classroom and self-study materials for Citizenship and Social Development.</p>
-          <span class="card-arrow">Open materials →</span>
-        </a>
-      </div>
-    </div>
-
-    <div id="panel-activity" role="tabpanel" aria-labelledby="tab-activity" hidden>
-      <div class="cards">
-        <a class="card" href="ces-activity/">
-          <p class="card-kicker"><span class="badge badge-student">Student</span><span class="badge badge-desktop">Desktop</span></p>
-          <h2>SoftSpeak</h2>
-          <p>SoftSpeak class activity for a desktop or laptop.</p>
-          <span class="card-arrow">Open activity →</span>
-        </a>
-        <a class="card" href="ces-activity-mobile/">
-          <p class="card-kicker"><span class="badge badge-student">Student</span><span class="badge badge-phone">Phone</span></p>
-          <h2>SoftSpeak Mobile</h2>
-          <p>SoftSpeak class activity for a phone.</p>
-          <span class="card-arrow">Open activity →</span>
-        </a>
-      </div>
+    <div class="cards">
+      <a class="card" href="teaching-materials/">
+        <p class="card-kicker"><span class="badge badge-student">Student</span></p>
+        <h2>Teaching Materials</h2>
+        <p>Classroom and self-study materials for Citizenship, Economics and Society.</p>
+        <span class="card-arrow">Open materials →</span>
+      </a>
+      <a class="card" href="activity/">
+        <p class="card-kicker"><span class="badge badge-student">Student</span></p>
+        <h2>Activity</h2>
+        <p>SoftSpeak class activities for a desktop or a phone.</p>
+        <span class="card-arrow">Open Activity →</span>
+      </a>
     </div>
 
     <footer>
-      聖公會聖匠中學 SKH Holy Carpenter Secondary School · Citizenship and Social Development<br>
+      聖公會聖匠中學 SKH Holy Carpenter Secondary School · Citizenship, Economics and Society<br>
       Materials for school use
     </footer>
   </div>
-  <script>
-    (function () {
-      var STORAGE_KEY = "ces-hub-tab";
-      var tabs = Array.prototype.slice.call(document.querySelectorAll('.section-tabs [role="tab"]'));
-      if (!tabs.length) return;
-
-      function panelFor(tab) {
-        return document.getElementById(tab.getAttribute("aria-controls"));
-      }
-
-      function selectTab(tab, persist) {
-        tabs.forEach(function (item) {
-          var selected = item === tab;
-          item.setAttribute("aria-selected", selected ? "true" : "false");
-          item.tabIndex = selected ? 0 : -1;
-          var panel = panelFor(item);
-          if (!panel) return;
-          if (selected) panel.removeAttribute("hidden");
-          else panel.setAttribute("hidden", "");
-        });
-        if (!persist) return;
-        try { sessionStorage.setItem(STORAGE_KEY, tab.id); } catch (err) {}
-      }
-
-      var saved = null;
-      try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (err) {}
-      var initial = tabs.filter(function (tab) { return tab.id === saved; })[0] || tabs[0];
-      selectTab(initial, false);
-
-      tabs.forEach(function (tab, index) {
-        tab.addEventListener("click", function () {
-          selectTab(tab, true);
-        });
-        tab.addEventListener("keydown", function (event) {
-          var nextIndex = null;
-          if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
-          else if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
-          else if (event.key === "Home") nextIndex = 0;
-          else if (event.key === "End") nextIndex = tabs.length - 1;
-          if (nextIndex === null) return;
-          event.preventDefault();
-          var next = tabs[nextIndex];
-          selectTab(next, true);
-          next.focus();
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
