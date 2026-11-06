@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- cache 20261106a -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CES · SKH Holy Carpenter Secondary School</title>
+<meta name="description" content="Citizenship and Social Development subject site for SKH Holy Carpenter Secondary School — teaching materials.">
+<style>
+  :root {
+    --accent: #5bbad5;
+    --accent-deep: #2a8fad;
+    --accent-ink: #0c5a70;
+    --kicker: #2a8fad;
+    --accent-soft: #e8f7fb;
+    --navy: #123a4d;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --card: #ffffff;
+    --bg: #f5fafc;
+    --border: #d3e8ef;
+    --shadow: 0 4px 16px rgba(18, 58, 77, 0.07);
+    --teacher: #0c5a70;
+    --teacher-soft: #e6f4f8;
+    --phone: #2f6b3c;
+    --phone-soft: #e7f6ea;
+    --desktop: #3d4570;
+    --desktop-soft: #eceef8;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: "Segoe UI", system-ui, -apple-system, "PingFang HK", "Noto Sans TC", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: calc(24px + env(safe-area-inset-top, 0px)) 18px 48px;
+  }
+  header.hero {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .hero-accent {
+    height: 6px;
+    background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 20px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand img {
+    height: 58px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+  .hero-body { padding: 14px 20px 18px; }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+  .subject {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--muted);
+  }
+  .cards { display: grid; gap: 14px; margin-top: 16px; }
+  a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 18px 18px;
+    box-shadow: var(--shadow);
+    min-height: 44px;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  a.card:hover, a.card:focus-visible {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 6px 20px rgba(91, 186, 213, 0.22);
+  }
+  a.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .card-kicker {
+    margin: 0 0 6px;
+  }
+  .card h2 {
+    margin: 0 0 6px;
+    font-size: 1.2rem;
+    color: var(--navy);
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  .card-arrow {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+  }
+  .badge {
+    display: inline-block;
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+  .badge-student {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+  footer {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: .78rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media print {
+    body { background: #fff; }
+    a.card { box-shadow: none; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-accent" aria-hidden="true"></div>
+      <div class="brand">
+        <img src="https://www.hcs.edu.hk/template/app/img/logo.png" width="276" height="58" alt="SKH Holy Carpenter Secondary School logo">
+      </div>
+      <div class="hero-body">
+        <h1>CES</h1>
+        <p class="subject">Citizenship and Social Development · SKH Holy Carpenter Secondary School</p>
+      </div>
+    </header>
+
+    <div class="cards">
+      <a class="card" href="ces/">
+        <p class="card-kicker"><span class="badge badge-student">Student</span></p>
+        <h2>Teaching Materials</h2>
+        <p>Classroom and self-study materials for Citizenship and Social Development.</p>
+        <span class="card-arrow">Open materials →</span>
+      </a>
+    </div>
+
+    <footer>
+      聖公會聖匠中學 SKH Holy Carpenter Secondary School · Citizenship and Social Development<br>
+      Materials for school use
+    </footer>
+  </div>
+</body>
+</html>
